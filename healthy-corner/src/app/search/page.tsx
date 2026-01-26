@@ -8,8 +8,10 @@ import MenuItemCard from '@/components/menu/MenuItemCard'
 import { MenuItemCardSkeleton } from '@/components/ui/Skeleton'
 import { MenuItem } from '@/types/database'
 import { debounce } from '@/lib/utils'
+import { useTranslation } from 'react-i18next'
 
 function SearchContent() {
+    const { t } = useTranslation()
     const searchParams = useSearchParams()
     const initialQuery = searchParams.get('q') || ''
 
@@ -67,17 +69,17 @@ function SearchContent() {
     }, [query])
 
     return (
-        <div className="min-h-screen bg-[rgb(var(--color-background))] pb-20">
+        <div className="min-h-screen bg-[rgb(var(--color-background))]">
             {/* Search Header */}
             <div className="bg-[rgb(var(--color-surface))] shadow-sm sticky top-0 md:relative z-30 pt-4 pb-6 px-4">
                 <div className="container-custom max-w-3xl mx-auto">
-                    <h1 className="text-2xl font-bold mb-4 text-[rgb(var(--color-text-primary))]">Search Menu</h1>
+                    <h1 className="text-2xl font-bold mb-4 text-[rgb(var(--color-text-primary))]">{t('search.searchMenu')}</h1>
                     <div className="relative">
                         <input
                             type="text"
                             value={query}
                             onChange={(e) => setQuery(e.target.value)}
-                            placeholder="Search for food, ingredients, or macros..."
+                            placeholder={t('search.searchPlaceholder')}
                             className="w-full px-5 py-3 pl-12 rounded-xl border border-gray-200 shadow-sm focus:outline-none focus:ring-2 focus:ring-[rgb(var(--color-primary))] text-lg"
                             autoFocus
                         />
@@ -116,7 +118,7 @@ function SearchContent() {
                         {hasSearched && results.length > 0 && (
                             <div>
                                 <p className="text-[rgb(var(--color-text-secondary))] mb-4">
-                                    Found {results.length} results for "{query}"
+                                    {t('search.foundResults', { count: results.length, query })}
                                 </p>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                                     {results.map(item => (
@@ -131,9 +133,9 @@ function SearchContent() {
                         {hasSearched && results.length === 0 && (
                             <div className="text-center py-20">
                                 <div className="text-5xl mb-4">🤔</div>
-                                <h3 className="text-xl font-medium text-[rgb(var(--color-text-primary))] mb-2">No matches found</h3>
+                                <h3 className="text-xl font-medium text-[rgb(var(--color-text-primary))] mb-2">{t('search.noMatchesFound')}</h3>
                                 <p className="text-[rgb(var(--color-text-secondary))]">
-                                    Try checking your spelling or use different keywords.
+                                    {t('search.tryDifferentKeywords')}
                                 </p>
                             </div>
                         )}
@@ -141,7 +143,7 @@ function SearchContent() {
                         {!hasSearched && (
                             <div className="text-center py-20 opacity-50">
                                 <div className="text-5xl mb-4">🔍</div>
-                                <p className="text-lg">Type something to start searching</p>
+                                <p className="text-lg">{t('search.typeToSearch')}</p>
                             </div>
                         )}
                     </>

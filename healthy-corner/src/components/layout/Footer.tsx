@@ -5,9 +5,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS, DESKTOP_NAV_ITEMS, BASE_PATH } from '@/lib/constants'
 import { InstagramIcon, FacebookIcon, SnapchatLogo, WhatsAppIcon } from '@/components/ui/SocialIcons'
+import { useTranslation } from 'react-i18next'
 
 export default function Footer() {
+    const { t } = useTranslation()
     const currentYear = new Date().getFullYear()
+
+    const getNavLabel = (href: string) => {
+        if (href === '/') return t('nav.home')
+        if (href === '/services') return t('nav.services')
+        if (href === '/about') return t('nav.about')
+        if (href === '/contact') return t('nav.contact')
+        return ''
+    }
 
     return (
         <footer className="bg-text-main text-white py-20 overflow-hidden relative">
@@ -26,11 +36,11 @@ export default function Footer() {
                     </Link>
 
                     <h3 className="text-3xl md:text-4xl font-extrabold mb-4 tracking-tighter flex items-center justify-center gap-2">
-                        <span className="text-white font-brand">The Healthy</span>
-                        <span className="text-primary font-brand text-6xl mt-2">Corner</span>
+                        <span className="text-white font-brand">{t('header.appName').split(' ').slice(0, -1).join(' ')}</span>
+                        <span className="text-primary font-brand text-6xl mt-2">{t('header.appName').split(' ').slice(-1)[0]}</span>
                     </h3>
                     <p className="text-white/60 max-w-lg mb-12 text-lg leading-relaxed">
-                        Crafting the future of transparent nutrition. Every meal is a step towards a better, more balanced you.
+                        {t('footer.craftingFuture')}
                     </p>
 
                     {/* Navigation Links */}
@@ -41,7 +51,7 @@ export default function Footer() {
                                 href={item.href}
                                 className="text-white/80 hover:text-primary font-bold uppercase tracking-widest text-xs transition-colors"
                             >
-                                {item.label}
+                                {getNavLabel(item.href)}
                             </Link>
                         ))}
                     </nav>
@@ -52,7 +62,7 @@ export default function Footer() {
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all">
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                             </div>
-                            <h4 className="font-bold text-white mb-2">Locate Us</h4>
+                            <h4 className="font-bold text-white mb-2">{t('footer.locateUs')}</h4>
                             <p className="text-white/50 text-sm leading-relaxed">{CONTACT_INFO.address}</p>
                         </div>
 
@@ -65,15 +75,15 @@ export default function Footer() {
                                     className="object-contain p-2"
                                 />
                             </div>
-                            <h4 className="font-bold text-white mb-2">Hours</h4>
-                            <p className="text-white/50 text-sm">Mon - Sun: 8:00 AM - 11:00 PM</p>
+                            <h4 className="font-bold text-white mb-2">{t('footer.hours')}</h4>
+                            <p className="text-white/50 text-sm">{t('footer.hoursValue')}</p>
                         </div>
 
                         <div className="flex flex-col items-center group/info">
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all">
                                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                             </div>
-                            <h4 className="font-bold text-white mb-2">Contact</h4>
+                            <h4 className="font-bold text-white mb-2">{t('footer.contact')}</h4>
                             <p className="text-white/50 text-sm">{CONTACT_INFO.phone}</p>
                             <p className="text-white/50 text-sm">{CONTACT_INFO.email}</p>
                         </div>
@@ -97,7 +107,7 @@ export default function Footer() {
 
                     {/* Copyright */}
                     <div className="pt-10 border-t border-white/10 w-full text-white/30 text-xs font-medium uppercase tracking-[0.3em]">
-                        &copy; {currentYear} {APP_NAME}. Design for Health.
+                        &copy; {currentYear} {APP_NAME}. {t('footer.designForHealth')}
                     </div>
                 </div>
             </div>

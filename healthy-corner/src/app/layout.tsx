@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import MobileNav from "@/components/layout/MobileNav";
 import I18nProvider from "@/components/providers/I18nProvider";
 import { APP_NAME, APP_DESCRIPTION } from "@/lib/constants";
 
@@ -37,11 +36,10 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <I18nProvider>
           <Header />
-          <main className="flex-1 pb-16 md:pb-0">
+          <main className="flex-1">
             {children}
           </main>
           <Footer />
-          <MobileNav />
         </I18nProvider>
       </body>
     </html>

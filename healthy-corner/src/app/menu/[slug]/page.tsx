@@ -104,7 +104,7 @@ export default async function MenuItemPage({ params }: MenuDetailPageProps) {
     const allergens = ingredients.filter((i: any) => i.is_allergen)
 
     return (
-        <div className="min-h-screen bg-[rgb(var(--color-background))] pb-20">
+        <div className="min-h-screen bg-[rgb(var(--color-background))]">
             {/* Sticky Mobile Header / Breadcrumb */}
             <div className="sticky top-0 z-40 bg-[rgb(var(--color-surface))] shadow-sm py-4 px-4 md:px-8">
                 <div className="container-custom max-w-5xl mx-auto flex items-center text-sm">

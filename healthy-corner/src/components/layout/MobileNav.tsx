@@ -4,9 +4,19 @@ import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { MOBILE_NAV_ITEMS } from '@/lib/constants'
+import { useTranslation } from 'react-i18next'
 
 export default function MobileNav() {
     const pathname = usePathname()
+    const { t } = useTranslation()
+
+    const getNavLabel = (icon: string) => {
+        if (icon === 'menu') return t('nav.menu')
+        if (icon === 'search') return t('nav.search')
+        if (icon === 'heart') return t('nav.favorites')
+        if (icon === 'info') return t('nav.info')
+        return ''
+    }
 
     return (
         <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-[rgb(var(--color-surface))] border-t border-[rgb(var(--color-secondary))] shadow-lg mobile-safe z-50">
@@ -44,7 +54,7 @@ export default function MobileNav() {
                             )}
 
                             <span className={`text-xs font-medium ${isActive ? 'font-semibold' : ''}`}>
-                                {item.label}
+                                {getNavLabel(item.icon)}
                             </span>
                         </Link>
                     )

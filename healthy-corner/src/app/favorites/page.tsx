@@ -8,8 +8,10 @@ import { useFavorites } from '@/hooks/useFavorites'
 import { MenuItem } from '@/types/database'
 import Link from 'next/link'
 import Button from '@/components/ui/Button'
+import { useTranslation } from 'react-i18next'
 
 export default function FavoritesPage() {
+    const { t } = useTranslation()
     const { favorites, isLoaded } = useFavorites()
     const [items, setItems] = useState<MenuItem[]>([])
     const [loading, setLoading] = useState(true)
@@ -48,14 +50,14 @@ export default function FavoritesPage() {
     if (!isLoaded) return <div className="min-h-screen bg-[rgb(var(--color-background))]" />
 
     return (
-        <div className="min-h-screen bg-[rgb(var(--color-background))] pb-20">
+        <div className="min-h-screen bg-[rgb(var(--color-background))]">
             <div className="bg-[rgb(var(--color-surface))] shadow-sm border-b border-[rgb(var(--color-secondary))] py-8 md:py-12 mb-6">
                 <div className="container-custom">
                     <h1 className="text-3xl md:text-4xl font-bold text-[rgb(var(--color-text-primary))] mb-3">
-                        Your Favorites
+                        {t('favorites.yourFavorites')}
                     </h1>
                     <p className="text-[rgb(var(--color-text-secondary))] text-lg">
-                        Saved items for quick access
+                        {t('favorites.savedItems')}
                     </p>
                 </div>
             </div>
@@ -79,13 +81,13 @@ export default function FavoritesPage() {
                     <div className="text-center py-20 bg-[rgb(var(--color-surface))] rounded-xl shadow-sm">
                         <div className="text-5xl mb-4">❤️</div>
                         <h2 className="text-2xl font-bold text-[rgb(var(--color-text-primary))] mb-2">
-                            No favorites yet
+                            {t('favorites.noFavoritesYet')}
                         </h2>
                         <p className="text-[rgb(var(--color-text-secondary))] mb-8 max-w-md mx-auto">
-                            Explore our menu and tap the heart icon to save your favorite healthy meals.
+                            {t('favorites.exploreMenuDesc')}
                         </p>
                         <Link href="/">
-                            <Button size="lg">Explore Menu</Button>
+                            <Button size="lg">{t('favorites.exploreMenu')}</Button>
                         </Link>
                     </div>
                 )}
