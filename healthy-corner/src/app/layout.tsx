@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import MobileNav from "@/components/layout/MobileNav";
+import I18nProvider from "@/components/providers/I18nProvider";
 import { APP_NAME, APP_DESCRIPTION } from "@/lib/constants";
 
 const inter = Inter({
@@ -34,12 +35,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-1 pb-16 md:pb-0">
-          {children}
-        </main>
-        <Footer />
-        <MobileNav />
+        <I18nProvider>
+          <Header />
+          <main className="flex-1 pb-16 md:pb-0">
+            {children}
+          </main>
+          <Footer />
+          <MobileNav />
+        </I18nProvider>
       </body>
     </html>
   );

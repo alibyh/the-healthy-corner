@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "services": "خدماتنا",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "menu": "القائمة",
+    "search": "بحث",
+    "favorites": "المفضلة",
+    "info": "معلومات"
+  },
+  "header": {
+    "appName": "الزاوية الصحية",
+    "tagline": "التغذية الذكية",
+    "orderNow": "اطلب الآن"
+  },
+  "common": {
+    "search": "بحث",
+    "favorites": "المفضلة"
+  }
+}

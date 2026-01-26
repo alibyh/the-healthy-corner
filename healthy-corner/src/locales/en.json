@@ -1,0 +1,21 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Our Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "menu": "Menu",
+    "search": "Search",
+    "favorites": "Favorites",
+    "info": "Info"
+  },
+  "header": {
+    "appName": "The Healthy Corner",
+    "tagline": "Smart Nutrition",
+    "orderNow": "Order Now"
+  },
+  "common": {
+    "search": "Search",
+    "favorites": "Favorites"
+  }
+}
