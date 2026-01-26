@@ -11,6 +11,18 @@ interface CategoryPageProps {
     }>
 }
 
+export async function generateStaticParams() {
+    const supabase = await createClient()
+    const { data: categories } = await supabase
+        .from('categories')
+        .select('slug')
+        .eq('is_active', true)
+
+    return categories?.map((category) => ({
+        slug: category.slug,
+    })) || []
+}
+
 export async function generateMetadata({ params }: CategoryPageProps) {
     const { slug } = await params
     const supabase = await createClient()

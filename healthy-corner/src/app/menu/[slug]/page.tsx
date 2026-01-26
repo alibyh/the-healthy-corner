@@ -14,6 +14,18 @@ interface MenuDetailPageProps {
     }>
 }
 
+export async function generateStaticParams() {
+    const supabase = await createClient()
+    const { data: items } = await supabase
+        .from('menu_items')
+        .select('slug')
+        .eq('is_active', true)
+
+    return items?.map((item) => ({
+        slug: item.slug,
+    })) || []
+}
+
 export async function generateMetadata({ params }: MenuDetailPageProps) {
     const { slug } = await params
     const supabase = await createClient()
