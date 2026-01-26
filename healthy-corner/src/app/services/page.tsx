@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { createClient } from '@/lib/supabase/server';
-import { APP_NAME } from '@/lib/constants';
+import { APP_NAME, BASE_PATH } from '@/lib/constants';
 import Button from '@/components/ui/Button';
 
 // Refined icons mapping for services
@@ -39,7 +39,7 @@ export default async function ServicesPage() {
             <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-text-main">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/hero.jpg"
+                        src={`${BASE_PATH}/images/hero.jpg`}
                         alt="Our Services Background"
                         fill
                         className="object-cover opacity-30 grayscale"
@@ -66,7 +66,7 @@ export default async function ServicesPage() {
                 {/* Background Logo Element */}
                 <div className="absolute top-0 left-0 w-1/3 h-full opacity-[0.03] pointer-events-none transform -rotate-12 -translate-x-20">
                     <Image
-                        src="/images/logo.jpg"
+                        src={`${BASE_PATH}/images/logo.jpg`}
                         alt="Background Logo"
                         fill
                         className="object-contain"

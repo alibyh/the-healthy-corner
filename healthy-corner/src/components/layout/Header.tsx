@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { APP_NAME, DESKTOP_NAV_ITEMS } from '@/lib/constants'
+import { APP_NAME, DESKTOP_NAV_ITEMS, BASE_PATH } from '@/lib/constants'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 
@@ -30,7 +30,7 @@ export default function Header() {
                 <Link href="/" className="flex items-center gap-3 group">
                     <div className="w-12 h-12 relative overflow-hidden rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 bg-white">
                         <Image
-                            src="/images/logo.jpg"
+                            src={`${BASE_PATH}/images/logo.jpg`}
                             alt="Healthy Corner Logo"
                             fill
                             className="object-cover"

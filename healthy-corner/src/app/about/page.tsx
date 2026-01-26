@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
-import { APP_NAME } from '@/lib/constants'
+import { APP_NAME, BASE_PATH } from '@/lib/constants'
 import Card from '@/components/ui/Card'
 import Button from '@/components/ui/Button'
 
@@ -45,7 +45,7 @@ export default async function AboutPage() {
             <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-text-main">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/images/hero.jpg"
+                        src={`${BASE_PATH}/images/hero.jpg`}
                         alt="About Us Background"
                         fill
                         className="object-cover opacity-40 grayscale"
@@ -73,7 +73,7 @@ export default async function AboutPage() {
                             <div className="absolute -inset-4 bg-primary/5 rounded-[3rem] blur-2xl group-hover:bg-primary/10 transition-all duration-700" />
                             <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border border-secondary-dark/10">
                                 <Image
-                                    src="/images/hero.jpg"
+                                    src={`${BASE_PATH}/images/hero.jpg`}
                                     alt="Our Journey"
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-1000"
@@ -111,7 +111,7 @@ export default async function AboutPage() {
             <section className="bg-surface py-24 md:py-32 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/3 h-full opacity-[0.03] pointer-events-none transform rotate-12 translate-x-20">
                     <Image
-                        src="/images/logo.jpg"
+                        src={`${BASE_PATH}/images/logo.jpg`}
                         alt="Background Logo"
                         fill
                         className="object-contain"

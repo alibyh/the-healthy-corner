@@ -54,8 +54,11 @@ export const RECENT_SEARCHES_KEY = 'healthy-corner-recent-searches'
 export const ITEMS_PER_PAGE = 12
 
 // Image placeholders
-export const PLACEHOLDER_FOOD_IMAGE = '/images/placeholder-food.jpg'
-export const PLACEHOLDER_CATEGORY_IMAGE = '/images/placeholder-category.jpg'
+export const REPO_NAME = '/the-healthy-corner'
+export const BASE_PATH = process.env.NODE_ENV === 'production' ? REPO_NAME : ''
+
+export const PLACEHOLDER_FOOD_IMAGE = `${BASE_PATH}/images/placeholder-food.jpg`
+export const PLACEHOLDER_CATEGORY_IMAGE = `${BASE_PATH}/images/placeholder-category.jpg`
 
 // Social media (example)
 export const SOCIAL_LINKS = {

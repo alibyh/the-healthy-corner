@@ -5,10 +5,10 @@ import { createClient } from '@/lib/supabase/server'
 import CategoryCard from '@/components/menu/CategoryCard'
 import { CategoryCardSkeleton } from '@/components/ui/Skeleton'
 import Button from '@/components/ui/Button'
-import { APP_NAME } from '@/lib/constants'
+import { APP_NAME, BASE_PATH } from '@/lib/constants'
 
 // Note: Using the user-provided hero image
-const HERO_IMAGE = '/images/hero.jpg';
+const HERO_IMAGE = `${BASE_PATH}/images/hero.jpg`;
 
 async function getCategories() {
   const supabase = await createClient()

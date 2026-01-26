@@ -3,7 +3,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS, DESKTOP_NAV_ITEMS } from '@/lib/constants'
+import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS, DESKTOP_NAV_ITEMS, BASE_PATH } from '@/lib/constants'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
@@ -16,7 +16,7 @@ export default function Footer() {
                     <Link href="/" className="flex items-center gap-3 mb-8 group">
                         <div className="w-16 h-16 relative overflow-hidden rounded-2xl shadow-2xl scale-125 transition-transform duration-500 group-hover:rotate-12 bg-white">
                             <Image
-                                src="/images/logo.jpg"
+                                src={`${BASE_PATH}/images/logo.jpg`}
                                 alt="Healthy Corner Logo"
                                 fill
                                 className="object-cover"
