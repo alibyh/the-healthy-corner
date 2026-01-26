@@ -60,16 +60,19 @@ export const BASE_PATH = process.env.NODE_ENV === 'production' ? REPO_NAME : ''
 export const PLACEHOLDER_FOOD_IMAGE = `${BASE_PATH}/images/placeholder-food.jpg`
 export const PLACEHOLDER_CATEGORY_IMAGE = `${BASE_PATH}/images/placeholder-category.jpg`
 
-// Social media (example)
+// Social media
 export const SOCIAL_LINKS = {
-    facebook: '#',
-    instagram: '#',
-    twitter: '#',
+    facebook: 'https://www.facebook.com/share/17smBmCAwH/?mibextid=wwXIfr',
+    instagram: 'https://www.instagram.com/healthycornermr?igsh=NHVjcmxxOWhpczZk',
+    snapchat: 'https://snapchat.com/t/jomDgNnl',
+    whatsapp: 'https://wa.me/22236820842',
 } as const
 
 // Contact info
 export const CONTACT_INFO = {
-    phone: '+222 XX XX XX XX',
+    phone: '+222 36 82 08 42',
+    whatsapp: '+222 36 82 08 42',
     email: 'contact@healthycorner.mr',
     address: 'Nouakchott, Mauritania',
+    googleMaps: 'https://maps.app.goo.gl/UnCtudp1zLSfZNfn6',
 } as const

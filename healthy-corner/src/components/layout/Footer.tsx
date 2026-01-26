@@ -69,8 +69,10 @@ export default function Footer() {
 
                     {/* Socials */}
                     <div className="flex gap-6 mb-12">
-                        <a href={SOCIAL_LINKS.instagram} className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-primary transition-all hover:-translate-y-1">📸</a>
-                        <a href={SOCIAL_LINKS.facebook} className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-primary transition-all hover:-translate-y-1">👥</a>
+                        <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-primary transition-all hover:-translate-y-1">📸</a>
+                        <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-primary transition-all hover:-translate-y-1">👥</a>
+                        <a href={SOCIAL_LINKS.snapchat} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-yellow-500 transition-all hover:-translate-y-1">👻</a>
+                        <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-green-500 transition-all hover:-translate-y-1">🟢</a>
                     </div>
 
                     {/* Copyright */}
