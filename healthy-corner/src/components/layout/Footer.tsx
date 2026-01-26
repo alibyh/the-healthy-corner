@@ -57,8 +57,13 @@ export default function Footer() {
                         </div>
 
                         <div className="flex flex-col items-center group/info">
-                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all">
-                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all relative overflow-hidden">
+                                <Image
+                                    src={`${BASE_PATH}/images/icons/working-hours.gif`}
+                                    alt="Working Hours"
+                                    fill
+                                    className="object-cover p-2"
+                                />
                             </div>
                             <h4 className="font-bold text-white mb-2">Hours</h4>
                             <p className="text-white/50 text-sm">Mon - Sun: 8:00 AM - 11:00 PM</p>

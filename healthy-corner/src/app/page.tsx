@@ -197,8 +197,13 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="flex items-center gap-4 text-white group/item">
-                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl group-hover/item:bg-accent group-hover/item:text-primary-dark transition-all duration-300">
-                  <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl group-hover/item:bg-accent group-hover/item:text-primary-dark transition-all duration-300 relative overflow-hidden">
+                  <Image
+                    src={`${BASE_PATH}/images/icons/working-hours.gif`}
+                    alt="Working Hours"
+                    fill
+                    className="object-cover p-2"
+                  />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs uppercase tracking-widest font-black text-white/50">Service Hours</span>
