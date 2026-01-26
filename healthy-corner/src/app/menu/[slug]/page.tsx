@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
+import { createClient, createStaticClient } from '@/lib/supabase/server'
 import { NutritionPanel } from '@/components/menu/NutritionBadge'
 import Button from '@/components/ui/Button'
 import { formatPrice } from '@/lib/utils'
@@ -15,7 +15,7 @@ interface MenuDetailPageProps {
 }
 
 export async function generateStaticParams() {
-    const supabase = await createClient()
+    const supabase = await createStaticClient()
     const { data: items } = await supabase
         .from('menu_items')
         .select('slug')

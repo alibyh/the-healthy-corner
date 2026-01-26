@@ -2,7 +2,22 @@ import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 
 export async function createClient() {
-    const cookieStore = await cookies()
+    let cookieStore;
+    try {
+        cookieStore = await cookies()
+    } catch {
+        // cookies() fails during static generation (next build)
+        return createServerClient(
+            process.env.NEXT_PUBLIC_SUPABASE_URL!,
+            process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+            {
+                cookies: {
+                    getAll() { return [] },
+                    setAll() { },
+                },
+            }
+        )
+    }
 
     return createServerClient(
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -19,11 +34,17 @@ export async function createClient() {
                         )
                     } catch {
                         // The `setAll` method was called from a Server Component.
-                        // This can be ignored if you have middleware refreshing
-                        // user sessions.
                     }
                 },
             },
         }
     )
+}
+
+/**
+ * Kept for specific generateStaticParams usage if preferred, 
+ * but createClient is now safe for all environments.
+ */
+export async function createStaticClient() {
+    return createClient()
 }

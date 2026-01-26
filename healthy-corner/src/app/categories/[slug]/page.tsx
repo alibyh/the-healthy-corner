@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import { notFound } from 'next/navigation'
-import { createClient } from '@/lib/supabase/server'
+import { createClient, createStaticClient } from '@/lib/supabase/server'
 import FilteredMenuGrid from '@/components/menu/FilteredMenuGrid'
 import { MenuItemCardSkeleton } from '@/components/ui/Skeleton'
 import { Category, MenuItem } from '@/types/database'
@@ -12,7 +12,7 @@ interface CategoryPageProps {
 }
 
 export async function generateStaticParams() {
-    const supabase = await createClient()
+    const supabase = await createStaticClient()
     const { data: categories } = await supabase
         .from('categories')
         .select('slug')
