@@ -106,9 +106,9 @@ function SearchContent() {
             </div>
 
             {/* Results */}
-            <div className="container-custom max-w-7xl mx-auto mt-6">
+            <div className="container-custom max-w-7xl mx-auto mt-4 md:mt-6 px-4 md:px-6">
                 {loading ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                         {[...Array(8)].map((_, i) => (
                             <MenuItemCardSkeleton key={i} />
                         ))}
@@ -117,10 +117,10 @@ function SearchContent() {
                     <>
                         {hasSearched && results.length > 0 && (
                             <div>
-                                <p className="text-[rgb(var(--color-text-secondary))] mb-4">
+                                <p className="text-[rgb(var(--color-text-secondary))] mb-4 text-sm md:text-base">
                                     {t('search.foundResults', { count: results.length, query })}
                                 </p>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                                     {results.map(item => (
                                         <div key={item.id} className="animate-fade-in">
                                             <MenuItemCard item={item} />

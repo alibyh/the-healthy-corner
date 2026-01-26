@@ -62,15 +62,15 @@ export default function FavoritesPage() {
                 </div>
             </div>
 
-            <div className="container-custom">
+            <div className="container-custom px-4 md:px-6">
                 {loading ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                         {[...Array(4)].map((_, i) => (
                             <MenuItemCardSkeleton key={i} />
                         ))}
                     </div>
                 ) : items.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
                         {items.map(item => (
                             <div key={item.id} className="animate-fade-in">
                                 <MenuItemCard item={item} isFavorite={true} />

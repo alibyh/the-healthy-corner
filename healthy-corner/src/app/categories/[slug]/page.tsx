@@ -88,13 +88,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     return (
         <div className="min-h-screen bg-[rgb(var(--color-background))]">
             {/* Category Header */}
-            <div className="bg-[rgb(var(--color-surface))] shadow-sm border-b border-[rgb(var(--color-secondary))] py-8 md:py-12 mb-6">
-                <div className="container-custom">
-                    <h1 className="text-3xl md:text-4xl font-bold text-[rgb(var(--color-text-primary))] mb-3 animate-slide-up">
+            <div className="bg-[rgb(var(--color-surface))] shadow-sm border-b border-[rgb(var(--color-secondary))] py-6 md:py-8 lg:py-12 mb-4 md:mb-6">
+                <div className="container-custom px-4 md:px-6">
+                    <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[rgb(var(--color-text-primary))] mb-2 md:mb-3 animate-slide-up">
                         {category.name}
                     </h1>
                     {category.description && (
-                        <p className="text-[rgb(var(--color-text-secondary))] text-lg max-w-2xl animate-fade-in">
+                        <p className="text-[rgb(var(--color-text-secondary))] text-sm md:text-base lg:text-lg max-w-2xl animate-fade-in">
                             {category.description}
                         </p>
                     )}
@@ -102,7 +102,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             </div>
 
             {/* Interactive Grid */}
-            <div className="container-custom pb-12">
+            <div className="container-custom pb-8 md:pb-12 px-4 md:px-6">
                 <Suspense
                     fallback={
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">

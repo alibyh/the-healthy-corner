@@ -57,13 +57,13 @@ export default function FilteredMenuGrid({ initialItems, categoryName }: Filtere
     return (
         <div className="flex flex-col lg:flex-row gap-8 relative items-start">
             {/* Mobile Filter Toggle */}
-            <div className="lg:hidden w-full sticky top-[4.5rem] z-30 bg-[rgb(var(--color-surface))] p-4 shadow-sm rounded-lg mb-4 flex items-center justify-between">
-                <span className="font-semibold">{filteredItems.length} items</span>
-                <div className="flex gap-2">
+            <div className="lg:hidden w-full sticky top-[4rem] z-30 bg-[rgb(var(--color-surface))] p-3 md:p-4 shadow-sm rounded-lg mb-4 flex items-center justify-between gap-2">
+                <span className="font-semibold text-sm md:text-base">{filteredItems.length} items</span>
+                <div className="flex gap-2 flex-shrink-0">
                     <select
                         value={sortBy}
                         onChange={(e) => setSortBy(e.target.value as SortOption['value'])}
-                        className="px-3 py-2 border rounded-lg bg-white text-sm"
+                        className="px-2 md:px-3 py-1.5 md:py-2 border rounded-lg bg-white text-xs md:text-sm"
                     >
                         {SORT_OPTIONS.map(opt => (
                             <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -73,12 +73,12 @@ export default function FilteredMenuGrid({ initialItems, categoryName }: Filtere
                         variant="outline"
                         size="sm"
                         onClick={() => setShowFilters(!showFilters)}
-                        className="flex items-center gap-2"
+                        className="flex items-center gap-1 md:gap-2 text-xs md:text-sm px-2 md:px-3"
                     >
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                         </svg>
-                        Filter
+                        <span className="hidden sm:inline">Filter</span>
                     </Button>
                 </div>
             </div>
@@ -133,7 +133,7 @@ export default function FilteredMenuGrid({ initialItems, categoryName }: Filtere
 
                 {/* Grid */}
                 {filteredItems.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
                         {filteredItems.map((item) => (
                             <div key={item.id} className="animate-fade-in">
                                 <MenuItemCard item={item} />
