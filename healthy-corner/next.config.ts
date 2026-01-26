@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: 'export', // Enables static export
+  basePath: '/the-healthy-corner',
+  assetPrefix: '/the-healthy-corner',
   images: {
     unoptimized: true,
     remotePatterns: [
