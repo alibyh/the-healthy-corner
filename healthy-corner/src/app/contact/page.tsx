@@ -71,7 +71,7 @@ export default function ContactPage() {
                                         <LocationIcon size={40} />
                                     </div>
                                     <h3 className="text-3xl font-black text-text-main mb-4 group-hover:text-white transition-colors">Our Space</h3>
-                                    <p className="text-text-muted group-hover:text-white/80 transition-colors font-medium mb-6">Step into the Corner and feel the energy.</p>
+                                    <p className="text-text-muted group-hover:text-white/80 transition-colors font-medium mb-6">in front of Chighali mosque -- Tevragh Zeina</p>
                                     <span className="px-6 py-2 bg-primary/10 text-primary font-bold rounded-full group-hover:bg-white group-hover:text-primary transition-all">Navigate on Maps</span>
                                 </div>
                             </a>

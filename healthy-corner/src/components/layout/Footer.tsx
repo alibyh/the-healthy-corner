@@ -59,10 +59,10 @@ export default function Footer() {
                         <div className="flex flex-col items-center group/info">
                             <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all relative overflow-hidden">
                                 <Image
-                                    src={`${BASE_PATH}/images/icons/working-hours.gif`}
+                                    src={`${BASE_PATH}/images/icons/working_hours.svg`}
                                     alt="Working Hours"
                                     fill
-                                    className="object-cover p-2"
+                                    className="object-contain p-2"
                                 />
                             </div>
                             <h4 className="font-bold text-white mb-2">Hours</h4>

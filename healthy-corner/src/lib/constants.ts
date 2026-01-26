@@ -55,7 +55,7 @@ export const ITEMS_PER_PAGE = 12
 
 // Image placeholders
 export const REPO_NAME = '/the-healthy-corner'
-export const BASE_PATH = process.env.NODE_ENV === 'production' ? REPO_NAME : ''
+export const BASE_PATH = REPO_NAME // Match next.config.ts basePath
 
 export const PLACEHOLDER_FOOD_IMAGE = `${BASE_PATH}/images/placeholder-food.jpg`
 export const PLACEHOLDER_CATEGORY_IMAGE = `${BASE_PATH}/images/placeholder-category.jpg`
@@ -73,6 +73,6 @@ export const CONTACT_INFO = {
     phone: '+222 36 82 08 42',
     whatsapp: '+222 36 82 08 42',
     email: 'contact@healthycorner.mr',
-    address: 'Nouakchott, Mauritania',
+    address: 'in front of Chighali mosque in Nouakchott -- Tevragh Zeina',
     googleMaps: 'https://maps.app.goo.gl/UnCtudp1zLSfZNfn6',
 } as const

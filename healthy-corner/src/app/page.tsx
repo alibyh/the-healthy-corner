@@ -193,16 +193,16 @@ export default function HomePage() {
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs uppercase tracking-widest font-black text-white/50">Our Location</span>
-                  <span className="font-bold text-lg">Nouakchott, Mauritania</span>
+                  <span className="font-bold text-sm leading-tight max-w-[200px]">in front of Chighali mosque -- Tevragh Zeina</span>
                 </div>
               </div>
               <div className="flex items-center gap-4 text-white group/item">
                 <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl group-hover/item:bg-accent group-hover/item:text-primary-dark transition-all duration-300 relative overflow-hidden">
                   <Image
-                    src={`${BASE_PATH}/images/icons/working-hours.gif`}
+                    src={`${BASE_PATH}/images/icons/working_hours.svg`}
                     alt="Working Hours"
                     fill
-                    className="object-cover p-2"
+                    className="object-contain p-2"
                   />
                 </div>
                 <div className="flex flex-col">
