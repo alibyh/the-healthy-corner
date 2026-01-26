@@ -27,7 +27,7 @@ export default function ContactContent() {
       <section className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-text-main shadow-2xl">
         <div className="absolute inset-0 z-0">
           <Image
-            src={`${BASE_PATH}/images/hero.jpg`}
+            src={`${BASE_PATH}/images/leaf-hero-bg.jpg`}
             alt="Contact Us Background"
             fill
             className="object-cover opacity-20 filter grayscale"
@@ -40,7 +40,7 @@ export default function ContactContent() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-xs font-bold uppercase tracking-[0.4em] mb-6 backdrop-blur-sm shadow-xl">
             {t('contact.stayConnected')}
           </span>
-          <h1 className="text-6xl md:text-9xl font-brand text-white mb-4 tracking-tighter leading-none">
+          <h1 className="text-6xl md:text-9xl font-brand !text-white mb-4 tracking-tighter leading-none">
             {t('contact.getInTouch')} <span className="text-primary mt-2 block md:inline italic">{t('contact.touch')}</span>
           </h1>
           <p className="text-white/50 max-w-lg mx-auto text-lg md:text-xl font-medium tracking-wide">

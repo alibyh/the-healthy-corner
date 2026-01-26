@@ -30,7 +30,7 @@ export default function ServicesContent({ services }: ServicesContentProps) {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-text-main">
         <div className="absolute inset-0 z-0">
           <Image
-            src={`${BASE_PATH}/images/hero.jpg`}
+            src={`${BASE_PATH}/images/leaf-hero-bg.jpg`}
             alt="Our Services Background"
             fill
             className="object-cover opacity-30 grayscale"
@@ -43,7 +43,7 @@ export default function ServicesContent({ services }: ServicesContentProps) {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-xs font-bold uppercase tracking-[0.3em] mb-6 shadow-xl backdrop-blur-sm">
             {t('services.totalWellness')}
           </span>
-          <h1 className="text-6xl md:text-9xl font-brand text-white mb-6 tracking-tighter leading-none">
+          <h1 className="text-6xl md:text-9xl font-brand !text-white mb-6 tracking-tighter leading-none">
             {t('services.ourServices')} <span className="text-primary mt-2 block md:inline">{t('services.services')}</span>
           </h1>
           <p className="text-white/60 max-w-2xl mx-auto text-lg md:text-xl font-medium leading-relaxed">

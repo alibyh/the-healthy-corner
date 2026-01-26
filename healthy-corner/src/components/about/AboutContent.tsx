@@ -21,7 +21,7 @@ export default function AboutContent({ content, achievements }: AboutContentProp
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden bg-text-main">
         <div className="absolute inset-0 z-0">
           <Image
-            src={`${BASE_PATH}/images/hero.jpg`}
+            src={`${BASE_PATH}/images/leaf-hero-bg.jpg`}
             alt="About Us Background"
             fill
             className="object-cover opacity-40 grayscale"
@@ -30,11 +30,8 @@ export default function AboutContent({ content, achievements }: AboutContentProp
         </div>
 
         <div className="container-premium relative z-10 text-center animate-reveal">
-          <span className="inline-block px-4 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-xs font-bold uppercase tracking-[0.3em] mb-6">
-            {t('about.ourLegacy')}
-          </span>
-          <h1 className="text-5xl md:text-8xl font-brand text-white mb-6 tracking-tighter leading-none">
-            {t('about.beyondThePlate')} <br />
+          <h1 className="text-5xl md:text-8xl font-brand mb-6 tracking-tighter leading-none [&>span:first-child]:!text-white">
+            <span>{t('about.beyondThePlate')}</span> <br />
             <span className="text-primary">{t('about.plate')}</span>
           </h1>
           <div className="w-24 h-2 bg-primary mx-auto rounded-full" />
@@ -49,7 +46,7 @@ export default function AboutContent({ content, achievements }: AboutContentProp
               <div className="absolute -inset-4 bg-primary/5 rounded-[3rem] blur-2xl group-hover:bg-primary/10 transition-all duration-700" />
               <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-2xl border border-secondary-dark/10">
                 <Image
-                  src={`${BASE_PATH}/images/hero.jpg`}
+                  src={`${BASE_PATH}/images/leaf-hero-bg.jpg`}
                   alt="Our Journey"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-1000"
@@ -161,14 +158,81 @@ export default function AboutContent({ content, achievements }: AboutContentProp
 
       {/* --- CALL TO ACTION --- */}
       <section className="container-premium pb-32">
-        <div className="bg-accent rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden group">
-          <div className="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-700" />
-          <h2 className="text-4xl md:text-7xl font-black text-primary-dark mb-8 leading-none">{t('about.bePartOfJourney')} <br /> {t('about.ourJourney')}</h2>
-          <Link href="/contact">
-            <Button size="lg" className="rounded-full px-12 py-8 text-xl font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all">
-              {t('about.contactUsToday')}
-            </Button>
-          </Link>
+        <div className="bg-gradient-to-br from-accent via-accent/95 to-primary-dark rounded-[3rem] md:rounded-[4rem] p-12 md:p-20 lg:p-24 text-center relative overflow-hidden group">
+          {/* Animated background elements */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/30" />
+            
+            {/* Floating circles */}
+            <div className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-2xl animate-float" />
+            <div className="absolute bottom-10 right-10 w-40 h-40 bg-primary/20 rounded-full blur-3xl animate-float-delayed" />
+            <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white/5 rounded-full blur-xl animate-pulse-slow" />
+            
+            {/* Animated grid pattern */}
+            <div className="absolute inset-0 opacity-[0.03]">
+              <div className="absolute inset-0" style={{
+                backgroundImage: 'linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)',
+                backgroundSize: '50px 50px'
+              }} />
+            </div>
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 animate-reveal">
+
+            {/* Enhanced heading */}
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 md:mb-8 leading-[1.1] tracking-tight relative">
+              <span className="block mb-2 animate-fade-in-up">{t('about.bePartOfJourney')}</span>
+              <span className="block text-white/90 font-brand italic relative inline-block">
+                {t('about.ourJourney')}
+                {/* Decorative underline */}
+                <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/50 rounded-full" />
+              </span>
+            </h2>
+
+            {/* Description text */}
+            <p className="text-white/90 text-lg md:text-xl mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-medium">
+              Together, we're building a healthier future. Your journey starts here.
+            </p>
+
+            {/* Enhanced CTA Button */}
+            <Link href="/contact" className="inline-block group/btn">
+              <Button 
+                size="lg" 
+                className="rounded-full px-10 md:px-14 py-5 md:py-6 text-lg md:text-xl font-bold shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-300 hover:scale-110 active:scale-95 relative overflow-hidden bg-white text-primary-dark border-2 border-white hover:border-white/80 group-hover/btn:bg-white/95"
+              >
+                <span className="relative z-10 flex items-center gap-3 text-primary-dark">
+                  {t('about.contactUsToday')}
+                  <svg className="w-5 h-5 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
+                {/* Button glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/50 via-white to-white/50 opacity-0 group-hover/btn:opacity-30 blur-xl transition-opacity duration-500" />
+              </Button>
+            </Link>
+
+            {/* Decorative elements */}
+            <div className="mt-12 flex flex-wrap justify-center items-center gap-6 text-white/80 text-sm">
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span className="font-semibold">Join Our Community</span>
+              </div>
+              <div className="w-1 h-1 rounded-full bg-white/50" />
+              <div className="flex items-center gap-2">
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span className="font-semibold">24/7 Support</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Hover effect overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
         </div>
       </section>
     </div>

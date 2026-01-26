@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { useTranslation } from 'react-i18next'
 import { BASE_PATH } from '@/lib/constants'
 
-const HERO_IMAGE = `${BASE_PATH}/images/hero.jpg`
+const HERO_IMAGE = `${BASE_PATH}/images/leaf-hero-bg.jpg`
 
 export default function PreFooterCTA() {
   const { t } = useTranslation()
