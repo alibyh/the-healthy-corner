@@ -127,7 +127,11 @@ export default async function AboutPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {(content.values || ["Transparency", "Integrity", "Innovation", "Sustainability", "Community"]).map((value: string, i: number) => (
                             <div key={i} className="premium-card p-10 group hover:bg-primary transition-all duration-500">
-                                <div className="text-4xl mb-6 group-hover:scale-125 transition-transform duration-500 block">✨</div>
+                                <div className="text-4xl mb-6 group-hover:scale-125 transition-transform duration-500 block text-primary group-hover:text-white">
+                                    <svg className="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l2.4 7.2h7.6L15.8 14.4 18.2 22l-6.2-4.6L5.8 22l2.4-7.6L2 9.2h7.6z" />
+                                    </svg>
+                                </div>
                                 <h3 className="text-2xl font-bold mb-4 group-hover:text-white transition-colors">{value}</h3>
                                 <p className="text-text-muted group-hover:text-white/80 transition-colors">
                                     Commitment to excellence in every aspect of our process, from sourcing to final serving.
@@ -154,8 +158,12 @@ export default async function AboutPage() {
                             <div key={item.id} className="relative group">
                                 <div className="absolute inset-0 bg-primary/5 rounded-3xl group-hover:bg-primary transition-all duration-500" />
                                 <div className="relative p-8 md:p-10 flex gap-6 items-start">
-                                    <div className="w-16 h-16 rounded-2xl bg-white shadow-xl flex items-center justify-center text-3xl shrink-0 group-hover:scale-110 transition-transform">
-                                        {item.achievement_type === 'award' ? '🏆' : '🎖️'}
+                                    <div className="w-16 h-16 rounded-2xl bg-white shadow-xl flex items-center justify-center text-primary shrink-0 group-hover:scale-110 transition-transform">
+                                        {item.achievement_type === 'award' ? (
+                                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                                        ) : (
+                                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                        )}
                                     </div>
                                     <div>
                                         <div className="flex items-center gap-3 mb-2">

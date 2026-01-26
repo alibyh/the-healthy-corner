@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { APP_NAME, CONTACT_INFO, SOCIAL_LINKS, DESKTOP_NAV_ITEMS, BASE_PATH } from '@/lib/constants'
+import { InstagramIcon, FacebookIcon, SnapchatLogo, WhatsAppIcon } from '@/components/ui/SocialIcons'
 
 export default function Footer() {
     const currentYear = new Date().getFullYear()
@@ -47,20 +48,26 @@ export default function Footer() {
 
                     {/* Info Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-5xl mb-20">
-                        <div className="flex flex-col items-center">
-                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary">📍</div>
+                        <div className="flex flex-col items-center group/info">
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
                             <h4 className="font-bold text-white mb-2">Locate Us</h4>
                             <p className="text-white/50 text-sm leading-relaxed">{CONTACT_INFO.address}</p>
                         </div>
 
-                        <div className="flex flex-col items-center">
-                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary">🕒</div>
+                        <div className="flex flex-col items-center group/info">
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </div>
                             <h4 className="font-bold text-white mb-2">Hours</h4>
                             <p className="text-white/50 text-sm">Mon - Sun: 8:00 AM - 11:00 PM</p>
                         </div>
 
-                        <div className="flex flex-col items-center">
-                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary">📞</div>
+                        <div className="flex flex-col items-center group/info">
+                            <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-xl mb-4 text-primary group-hover/info:bg-primary group-hover/info:text-white transition-all">
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                            </div>
                             <h4 className="font-bold text-white mb-2">Contact</h4>
                             <p className="text-white/50 text-sm">{CONTACT_INFO.phone}</p>
                             <p className="text-white/50 text-sm">{CONTACT_INFO.email}</p>
@@ -69,10 +76,18 @@ export default function Footer() {
 
                     {/* Socials */}
                     <div className="flex gap-6 mb-12">
-                        <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-primary transition-all hover:-translate-y-1">📸</a>
-                        <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-primary transition-all hover:-translate-y-1">👥</a>
-                        <a href={SOCIAL_LINKS.snapchat} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-yellow-500 transition-all hover:-translate-y-1">👻</a>
-                        <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-xl hover:bg-green-500 transition-all hover:-translate-y-1">🟢</a>
+                        <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-[#E1306C] transition-all hover:-translate-y-1">
+                            <InstagramIcon size={24} />
+                        </a>
+                        <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-[#1877F2] transition-all hover:-translate-y-1">
+                            <FacebookIcon size={24} />
+                        </a>
+                        <a href={SOCIAL_LINKS.snapchat} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-[#FFFC00] hover:text-black transition-all hover:-translate-y-1">
+                            <SnapchatLogo size={24} />
+                        </a>
+                        <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-[#25D366] transition-all hover:-translate-y-1">
+                            <WhatsAppIcon size={24} />
+                        </a>
                     </div>
 
                     {/* Copyright */}

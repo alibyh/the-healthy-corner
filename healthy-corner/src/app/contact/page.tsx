@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { CONTACT_INFO, SOCIAL_LINKS, APP_NAME, BASE_PATH } from '@/lib/constants';
 import Button from '@/components/ui/Button';
+import { InstagramIcon, FacebookIcon, SnapchatLogo, WhatsAppIcon, LocationIcon } from '@/components/ui/SocialIcons';
 
 export default function ContactPage() {
     return (
@@ -53,18 +54,22 @@ export default function ContactPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {/* WhatsApp Card */}
                             <a href={SOCIAL_LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="group">
-                                <div className="premium-card p-10 bg-white hover:bg-green-500 transition-all duration-700 h-full flex flex-col items-center text-center shadow-xl border-b-8 border-transparent hover:border-green-600">
-                                    <div className="w-20 h-20 bg-green-500/10 rounded-[2rem] flex items-center justify-center text-4xl mb-6 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-inner">🟢</div>
+                                <div className="premium-card p-10 bg-white hover:bg-[#25D366] transition-all duration-700 h-full flex flex-col items-center text-center shadow-xl border-b-8 border-transparent hover:border-[#128C7E]">
+                                    <div className="w-20 h-20 bg-[#25D366]/10 rounded-[2rem] flex items-center justify-center text-[#25D366] mb-6 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-inner">
+                                        <WhatsAppIcon size={40} />
+                                    </div>
                                     <h3 className="text-3xl font-black text-text-main mb-4 group-hover:text-white transition-colors">WhatsApp Us</h3>
                                     <p className="text-text-muted group-hover:text-white/80 transition-colors font-medium mb-6">Instantly place your order or ask a question.</p>
-                                    <span className="text-xl font-black text-green-600 group-hover:text-white transition-colors">{CONTACT_INFO.whatsapp}</span>
+                                    <span className="text-xl font-black text-[#25D366] group-hover:text-white transition-colors">{CONTACT_INFO.whatsapp}</span>
                                 </div>
                             </a>
 
                             {/* Location Card */}
                             <a href={CONTACT_INFO.googleMaps} target="_blank" rel="noopener noreferrer" className="group">
                                 <div className="premium-card p-10 bg-white hover:bg-primary transition-all duration-700 h-full flex flex-col items-center text-center shadow-xl border-b-8 border-transparent hover:border-accent">
-                                    <div className="w-20 h-20 bg-primary/10 rounded-[2rem] flex items-center justify-center text-4xl mb-6 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-inner">📍</div>
+                                    <div className="w-20 h-20 bg-primary/10 rounded-[2rem] flex items-center justify-center text-primary mb-6 group-hover:bg-white group-hover:scale-110 transition-all duration-500 shadow-inner">
+                                        <LocationIcon size={40} />
+                                    </div>
                                     <h3 className="text-3xl font-black text-text-main mb-4 group-hover:text-white transition-colors">Our Space</h3>
                                     <p className="text-text-muted group-hover:text-white/80 transition-colors font-medium mb-6">Step into the Corner and feel the energy.</p>
                                     <span className="px-6 py-2 bg-primary/10 text-primary font-bold rounded-full group-hover:bg-white group-hover:text-primary transition-all">Navigate on Maps</span>
@@ -79,19 +84,25 @@ export default function ContactPage() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                 {/* Instagram */}
-                                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="premium-card p-8 group/item hover:bg-primary flex flex-col items-center transition-all duration-500 text-center">
-                                    <div className="text-4xl mb-4 group-hover/item:scale-125 transition-transform">📸</div>
+                                <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="premium-card p-8 group/item hover:bg-[#E1306C] flex flex-col items-center transition-all duration-500 text-center">
+                                    <div className="text-4xl mb-4 group-hover/item:scale-125 transition-transform text-[#E1306C] group-hover/item:text-white">
+                                        <InstagramIcon size={40} />
+                                    </div>
                                     <span className="font-brand text-2xl group-hover/item:text-white">Instagram</span>
                                 </a>
                                 {/* Facebook */}
-                                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="premium-card p-8 group/item hover:bg-blue-600 flex flex-col items-center transition-all duration-500 text-center">
-                                    <div className="text-4xl mb-4 group-hover/item:scale-125 transition-transform">👥</div>
+                                <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="premium-card p-8 group/item hover:bg-[#1877F2] flex flex-col items-center transition-all duration-500 text-center">
+                                    <div className="text-4xl mb-4 group-hover/item:scale-125 transition-transform text-[#1877F2] group-hover/item:text-white">
+                                        <FacebookIcon size={40} />
+                                    </div>
                                     <span className="font-brand text-2xl group-hover/item:text-white">Facebook</span>
                                 </a>
                                 {/* Snapchat */}
-                                <a href={SOCIAL_LINKS.snapchat} target="_blank" rel="noopener noreferrer" className="premium-card p-8 group/item hover:bg-yellow-400 flex flex-col items-center transition-all duration-500 text-center">
-                                    <div className="text-4xl mb-4 group-hover/item:scale-125 transition-transform">👻</div>
-                                    <span className="font-brand text-2xl group-hover/item:text-white">Snapchat</span>
+                                <a href={SOCIAL_LINKS.snapchat} target="_blank" rel="noopener noreferrer" className="premium-card p-8 group/item hover:bg-[#FFFC00] flex flex-col items-center transition-all duration-500 text-center">
+                                    <div className="text-4xl mb-4 group-hover/item:scale-125 transition-transform text-[#FFFC00] group-hover/item:text-black">
+                                        <SnapchatLogo size={50} />
+                                    </div>
+                                    <span className="font-brand text-2xl group-hover/item:text-black">Snapchat</span>
                                 </a>
                             </div>
                         </div>
