@@ -20,7 +20,16 @@
     "exploreMenu": "استكشف القائمة",
     "viewFullMenu": "عرض القائمة الكاملة",
     "noCategoriesFound": "لم يتم العثور على فئات.",
-    "learnMore": "اعرف المزيد"
+    "learnMore": "اعرف المزيد",
+    "language": "اللغة",
+    "account": "الحساب",
+    "signUp": "إنشاء حساب",
+    "orderBy": "ترتيب حسب",
+    "default": "افتراضي",
+    "nameAsc": "الاسم (أ-ي)",
+    "nameDesc": "الاسم (ي-أ)",
+    "itemsAsc": "العناصر (منخفض إلى عالي)",
+    "itemsDesc": "العناصر (عالي إلى منخفض)"
   },
   "home": {
     "experienceTheDifference": "اختبر الفرق",

@@ -37,9 +37,6 @@ export default function ContactContent() {
         </div>
 
         <div className="container-premium relative z-10 text-center animate-reveal">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/20 border border-primary/30 text-primary-light text-xs font-bold uppercase tracking-[0.4em] mb-6 backdrop-blur-sm shadow-xl">
-            {t('contact.stayConnected')}
-          </span>
           <h1 className="text-6xl md:text-9xl font-brand !text-white mb-4 tracking-tighter leading-none">
             {t('contact.getInTouch')} <span className="text-primary mt-2 block md:inline italic">{t('contact.touch')}</span>
           </h1>

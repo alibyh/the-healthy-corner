@@ -4,6 +4,7 @@ import CategoryCard from '@/components/menu/CategoryCard'
 import { CategoryCardSkeleton } from '@/components/ui/Skeleton'
 import HomeContent from '@/components/home/HomeContent'
 import CategoriesHeader from '@/components/home/CategoriesHeader'
+import CategoriesSort from '@/components/home/CategoriesSort'
 import PreFooterCTA from '@/components/home/PreFooterCTA'
 
 async function getCategories() {
@@ -53,6 +54,7 @@ export default function HomePage() {
       <section className="py-24 md:py-32">
         <div className="container-premium">
           <CategoriesHeader />
+          <CategoriesSort />
           <Suspense fallback={<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"><CategoryCardSkeleton /><CategoryCardSkeleton /><CategoryCardSkeleton /><CategoryCardSkeleton /></div>}>
             <CategoriesGrid />
           </Suspense>

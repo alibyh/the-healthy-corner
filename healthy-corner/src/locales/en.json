@@ -20,7 +20,16 @@
     "exploreMenu": "Explore Menu",
     "viewFullMenu": "View Full Menu",
     "noCategoriesFound": "No categories found.",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "language": "Language",
+    "account": "Account",
+    "signUp": "Sign Up",
+    "orderBy": "Order by",
+    "default": "Default",
+    "nameAsc": "Name (A-Z)",
+    "nameDesc": "Name (Z-A)",
+    "itemsAsc": "Items (Low to High)",
+    "itemsDesc": "Items (High to Low)"
   },
   "home": {
     "experienceTheDifference": "Experience the Difference",

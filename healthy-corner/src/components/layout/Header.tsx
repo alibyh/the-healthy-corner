@@ -85,6 +85,27 @@ export default function Header() {
 
                 {/* Actions */}
                 <div className="flex items-center gap-2 md:gap-3">
+                    {/* Language Switcher */}
+                    <LanguageSwitcher />
+
+                    {/* Cart Icon */}
+                    <Link
+                        href="/cart"
+                        className="p-2.5 rounded-full hover:bg-secondary transition-colors relative group"
+                        aria-label="Shopping Cart"
+                    >
+                        <svg className="w-5 h-5 md:w-6 md:h-6 text-text-main group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        {/* Cart badge - can be connected to cart state later */}
+                        {/* For now, hidden. Uncomment and connect to cart state when cart functionality is added */}
+                        {/* {cartCount > 0 && (
+                          <span className="absolute -top-1 -right-1 w-5 h-5 bg-primary text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow-lg">
+                            {cartCount}
+                          </span>
+                        )} */}
+                    </Link>
+
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setMobileMenuOpen(true)}
@@ -95,8 +116,6 @@ export default function Header() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-
-                    <LanguageSwitcher />
 
                     <Link
                         href="/search"
