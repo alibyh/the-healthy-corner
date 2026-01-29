@@ -3,7 +3,7 @@
     "home": "الرئيسية",
     "services": "خدماتنا",
     "about": "من نحن",
-    "contact": "اتصل بنا",
+    "contact": "تواصل معنا",
     "menu": "القائمة",
     "search": "بحث",
     "favorites": "المفضلة",
@@ -47,18 +47,22 @@
     "sustainableLife": "حياة مستدامة",
     "sustainableLifeDesc": "مصدر محلي، تغليف مستدام. نهتم بصحتك والبيئة، ونخلق مستقبلاً أفضل للجميع.",
     "visitNouakchottFinest": "زر أفضل مكان في نواكشوط",
-    "readyToEatBetter": "جاهزون لتناول",
+    "readyToEatBetter": "جاهز لتناول",
     "better": "طعام أفضل؟",
     "readyToEatDesc": "ادخل إلى مساحة حيث كل قضمة محسوبة لصحتك وكل نكهة مصنوعة لروحك.",
     "ourLocation": "موقعنا",
     "serviceHours": "ساعات الخدمة",
     "everyDayHours": "كل يوم: 8:00 - 23:00",
     "nowServing": "نخدم الآن",
-    "orderNow": "اطلب الآن"
+    "orderNow": "اطلب الآن",
+    "freshIngredients": "100% طازج",
+    "transparentNutrition2": "تغذية شفافة",
+    "ourLocationDesc": "مقابل مسجد شيغالي - تفرغ زينة"
   },
   "footer": {
     "craftingFuture": "صياغة مستقبل التغذية الشفافة. كل وجبة هي خطوة نحو نسخة أفضل وأكثر توازناً منك.",
     "locateUs": "حدد موقعنا",
+    "address": "مقابل مسجد شيغالي في نواكشوط -- تفرغ زينة",
     "hours": "الساعات",
     "hoursValue": "الإثنين - الأحد: 8:00 صباحاً - 11:00 مساءً",
     "contact": "اتصل",
@@ -82,7 +86,10 @@
     "milestonesDesc": "الاعتراف بالتزامنا بالتميز في الصحة والتغذية على مر السنين.",
     "bePartOfJourney": "كن جزءاً من",
     "ourJourney": "رحلتنا",
-    "contactUsToday": "اتصل بنا اليوم"
+    "contactUsToday": " تواصل معنا اليوم",
+    "togetherWeAreBuildingAHealthierFuture": "معاً نبني مستقبل صحي أفضل. رحلتك تبدأ هنا.",
+    "joinOurCommunity": "كن جزءاً من مجتمعنا",
+    "twentyFourSevenSupport": "دعم 24/7"
   },
   "services": {
     "totalWellness": "العافية الشاملة",
@@ -103,7 +110,7 @@
     "whatsAppUs": "راسلنا على واتساب",
     "whatsAppDesc": "اطلب فوراً أو اسأل سؤالاً.",
     "ourSpace": "مساحتنا",
-    "navigateOnMaps": "انتقل على الخرائط",
+    "navigateOnMaps": "إفتح الخريطة",
     "socialCorner": "الزاوية",
     "corner": "الاجتماعية.",
     "dropAMessage": "اترك",
@@ -117,7 +124,8 @@
     "sendMessage": "إرسال الرسالة",
     "responseTime": "نرد عادة خلال",
     "responseTimeHours": "24 ساعة من الاستلام.",
-    "openInteractiveMap": "فتح الخريطة التفاعلية"
+    "openInteractiveMap": "افتح الخريطة التفاعلية",
+    "ourSpaceDesc": "مقابل مسجد شيغالي - تفرغ زينة"
   },
   "search": {
     "searchMenu": "البحث في القائمة",

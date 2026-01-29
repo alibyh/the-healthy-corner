@@ -9,11 +9,12 @@ import { BASE_PATH } from '@/lib/constants'
 const HERO_IMAGE = `${BASE_PATH}/images/leaf-hero-bg.jpg`
 
 export default function PreFooterCTA() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isRTL = i18n.language === 'ar'
 
   return (
     <section className="container-premium py-24 md:py-32">
-      <div className="bg-primary rounded-[3rem] p-8 md:p-20 relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center gap-16 group">
+      <div className={`bg-primary rounded-[3rem] p-8 md:p-20 relative overflow-hidden shadow-2xl flex flex-col lg:flex-row items-center gap-16 group ${isRTL ? 'lg:flex-row-reverse' : ''}`}>
         {/* Background Image/Overlay */}
         <div className="absolute inset-0 opacity-10 grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000 ease-out">
           <Image
@@ -25,7 +26,7 @@ export default function PreFooterCTA() {
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary-dark/90" />
 
-        <div className="relative z-10 flex-1 text-center lg:text-left">
+        <div className={`relative z-10 flex-1 text-center ${isRTL ? 'lg:text-right' : 'lg:text-left'}`}>
           <div className="inline-block px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-bold uppercase tracking-[0.2em] mb-6">
             {t('home.visitNouakchottFinest')}
           </div>
@@ -33,21 +34,21 @@ export default function PreFooterCTA() {
             {t('home.readyToEatBetter')} <br />
             <span className="text-accent italic">{t('home.better')}</span>
           </h2>
-          <p className="text-xl text-white/80 mb-12 leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium">
+          <p className={`text-xl text-white/80 mb-12 leading-relaxed max-w-xl mx-auto font-medium ${isRTL ? 'lg:mx-0 lg:mr-0' : 'lg:mx-0 lg:ml-0'}`}>
             {t('home.readyToEatDesc')}
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto lg:mx-0">
-            <div className="flex items-center gap-4 text-white group/item">
+          <div className={`grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto ${isRTL ? 'lg:mx-0 lg:mr-0' : 'lg:mx-0 lg:ml-0'}`}>
+            <div className={`flex items-center gap-4 text-white group/item ${isRTL ? 'flex-row-reverse' : ''}`}>
               <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl group-hover/item:bg-accent group-hover/item:text-primary-dark transition-all duration-300">
                 <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
               </div>
               <div className="flex flex-col">
                 <span className="text-xs uppercase tracking-widest font-black text-white/50">{t('home.ourLocation')}</span>
-                <span className="font-bold text-sm leading-tight max-w-[200px]">in front of Chighali mosque -- Tevragh Zeina</span>
+                <span className="font-bold text-sm leading-tight max-w-[200px]">{t('home.ourLocationDesc')}</span>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-white group/item">
+            <div className={`flex items-center gap-4 text-white group/item ${isRTL ? 'flex-row-reverse' : ''}`}>
               <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl group-hover/item:bg-accent group-hover/item:text-primary-dark transition-all duration-300 relative overflow-hidden">
                 <Image
                   src={`${BASE_PATH}/images/icons/working_hours.svg`}
@@ -64,7 +65,7 @@ export default function PreFooterCTA() {
           </div>
         </div>
 
-        <div className="relative z-10 w-full lg:w-auto text-center lg:text-right">
+        <div className={`relative z-10 w-full lg:w-auto text-center ${isRTL ? 'lg:text-left' : 'lg:text-right'}`}>
           <Link href="/contact" className="inline-block">
             <div className="relative group/order p-4">
               {/* Glow effect */}

@@ -23,7 +23,9 @@ export const metadata: Metadata = {
     title: APP_NAME,
     description: APP_DESCRIPTION,
     type: "website",
+    url: "https://healthycornermauritanie.me",
   },
+  metadataBase: new URL("https://healthycornermauritanie.me"),
 };
 
 export default function RootLayout({

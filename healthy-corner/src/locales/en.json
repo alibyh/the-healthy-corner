@@ -54,11 +54,15 @@
     "serviceHours": "Service Hours",
     "everyDayHours": "Every Day: 8:00 - 23:00",
     "nowServing": "Now Serving",
-    "orderNow": "Order Now"
+    "orderNow": "Order Now",
+    "freshIngredients": "100% Fresh",
+    "transparentNutrition2": "Transparent Nutrition",
+    "ourLocationDesc": "in front of Chighali mosque -- Tevragh Zeina"
   },
   "footer": {
     "craftingFuture": "Crafting the future of transparent nutrition. Every meal is a step towards a better, more balanced you.",
     "locateUs": "Locate Us",
+    "address": "in front of Chighali mosque in Nouakchott -- Tevragh Zeina",
     "hours": "Hours",
     "hoursValue": "Mon - Sun: 8:00 AM - 11:00 PM",
     "contact": "Contact",
@@ -82,7 +86,10 @@
     "milestonesDesc": "Recognition for our commitment to excellence in health and nutrition over the years.",
     "bePartOfJourney": "BE PART OF",
     "ourJourney": "OUR JOURNEY",
-    "contactUsToday": "Contact Us Today"
+    "contactUsToday": "Contact Us Today",
+    "togetherWeAreBuildingAHealthierFuture": "Together, we're building a healthier future. Your journey starts here.",
+    "joinOurCommunity": "Join Our Community",
+    "twentyFourSevenSupport": "24/7 Support"
   },
   "services": {
     "totalWellness": "Total Wellness",
@@ -117,7 +124,8 @@
     "sendMessage": "SEND MESSAGE",
     "responseTime": "We typically respond within",
     "responseTimeHours": "24 hours of receiving.",
-    "openInteractiveMap": "Open Interactive Map"
+    "openInteractiveMap": "Open Interactive Map",
+    "ourSpaceDesc": "in front of Chighali mosque -- Tevragh Zeina"
   },
   "search": {
     "searchMenu": "Search Menu",

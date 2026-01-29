@@ -2,8 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export', // Enables static export
-  basePath: '/the-healthy-corner',
-  assetPrefix: '/the-healthy-corner',
+  // basePath removed for custom domain: healthycornermauritanie.me
   images: {
     unoptimized: true,
     remotePatterns: [

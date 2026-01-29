@@ -71,7 +71,7 @@ export default function ContactContent() {
                     <LocationIcon size={40} />
                   </div>
                   <h3 className="text-3xl font-black text-text-main mb-4 group-hover:text-white transition-colors">{t('contact.ourSpace')}</h3>
-                  <p className="text-text-muted group-hover:text-white/80 transition-colors font-medium mb-6">in front of Chighali mosque -- Tevragh Zeina</p>
+                  <p className="text-text-muted group-hover:text-white/80 transition-colors font-medium mb-6">{t('contact.ourSpaceDesc')}</p>
                   <span className="px-6 py-2 bg-primary/10 text-primary font-bold rounded-full group-hover:bg-white group-hover:text-primary transition-all">{t('contact.navigateOnMaps')}</span>
                 </div>
               </a>
@@ -139,6 +139,47 @@ export default function ContactContent() {
           </div>
         </div>
       </div>
+
+      {/* --- PLACE PHOTOS SECTION --- */}
+      <section className="container-premium mt-24">
+        <h2 className="text-4xl md:text-5xl font-black text-text-main mb-12 text-center">
+          {t('contact.ourSpace')}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24">
+          <div className="relative rounded-[2rem] overflow-hidden group shadow-2xl aspect-[4/3]">
+            <Image
+              src={`${BASE_PATH}/images/front_1.webp`}
+              alt="The Healthy Corner - Front View 1"
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            />
+          </div>
+          <div className="relative rounded-[2rem] overflow-hidden group shadow-2xl aspect-[4/3]">
+            <Image
+              src={`${BASE_PATH}/images/front_2.webp`}
+              alt="The Healthy Corner - Front View 2"
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            />
+          </div>
+          <div className="relative rounded-[2rem] overflow-hidden group shadow-2xl aspect-[4/3]">
+            <Image
+              src={`${BASE_PATH}/images/front_3.webp`}
+              alt="The Healthy Corner - Front View 3"
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            />
+          </div>
+          <div className="relative rounded-[2rem] overflow-hidden group shadow-2xl aspect-[4/3]">
+            <Image
+              src={`${BASE_PATH}/images/front_4.webp`}
+              alt="The Healthy Corner - Front View 4"
+              fill
+              className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* --- MAP SECTION --- */}
       <section className="container-premium mt-24">
