@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export', // Enables static export
-  // basePath removed for custom domain: healthycornermauritanie.me
+  //basePath removed for custom domain: healthycornermauritanie.me
   images: {
     unoptimized: true,
     remotePatterns: [
