@@ -34,30 +34,30 @@ export default function Header() {
 
     return (
         <>
-            <header className={cn(
-                "sticky top-0 z-50 transition-all duration-300",
-                scrolled
+        <header className={cn(
+            "sticky top-0 z-50 transition-all duration-300",
+            scrolled
                     ? "bg-white/80 backdrop-blur-md shadow-premium py-2"
                     : "bg-background py-2 border-b border-secondary-dark/10"
-            )}>
-                <div className="container-premium flex items-center justify-between">
-                    {/* Logo */}
+        )}>
+            <div className="container-premium flex items-center justify-between">
+                {/* Logo */}
                     <Link href="/" className="flex items-center gap-2 group">
                         <div className="w-10 h-10 md:w-12 md:h-12 relative overflow-hidden rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-500 bg-white">
-                            <Image
-                                src={`${BASE_PATH}/images/logo.jpg`}
-                                alt="Healthy Corner Logo"
-                                fill
-                                className="object-cover"
-                            />
-                        </div>
-                        <div className="flex flex-col">
+                        <Image
+                            src={`${BASE_PATH}/images/logo.jpg`}
+                            alt="Healthy Corner Logo"
+                            fill
+                            className="object-cover"
+                        />
+                    </div>
+                    <div className="flex flex-col">
                             <span className="text-lg md:text-2xl font-brand text-text-main leading-none">
                                 {t('header.appName')}
-                            </span>
+                        </span>
                             <span className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] font-black text-primary leading-none">{t('header.tagline')}</span>
-                        </div>
-                    </Link>
+                    </div>
+                </Link>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex items-center gap-1">
