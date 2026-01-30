@@ -24,31 +24,24 @@ export const metadata: Metadata = {
     description: APP_DESCRIPTION,
     type: "website",
     url: "https://healthycornermauritanie.me",
-    siteName: APP_NAME,
     images: [
       {
-        url: "https://healthycornermauritanie.me/images/logo.jpg",
+        url: "/images/logo.jpg",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: APP_NAME,
       },
     ],
-    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: APP_NAME,
     description: APP_DESCRIPTION,
-    images: ["https://healthycornermauritanie.me/images/logo.jpg"],
+    images: ["/images/logo.jpg"],
   },
   icons: {
-    icon: [
-      { url: "/images/logo.jpg", sizes: "any" },
-      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
-    ],
-    apple: [
-      { url: "/images/logo.jpg", sizes: "180x180", type: "image/jpeg" },
-    ],
+    icon: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
   },
   metadataBase: new URL("https://healthycornermauritanie.me"),
 };
