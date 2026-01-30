@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd healthy-corner && npm run build",
-  "installCommand": "cd healthy-corner && npm install",
-  "framework": "nextjs"
-}
