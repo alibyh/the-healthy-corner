@@ -21,6 +21,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const languages = [
     { code: 'en', name: 'English', flag: '🇬🇧' },
     { code: 'ar', name: 'العربية', flag: '🇸🇦' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
   ]
 
   // Close menu when route changes

@@ -4,6 +4,7 @@ import LanguageDetector from 'i18next-browser-languagedetector'
 
 import enTranslations from '@/locales/en.json'
 import arTranslations from '@/locales/ar.json'
+import frTranslations from '@/locales/fr.json'
 
 // Only initialize if not already initialized
 if (!i18n.isInitialized) {
@@ -18,9 +19,12 @@ if (!i18n.isInitialized) {
         ar: {
           translation: arTranslations,
         },
+        fr: {
+          translation: frTranslations,
+        },
       },
       fallbackLng: 'en',
-      supportedLngs: ['en', 'ar'],
+      supportedLngs: ['en', 'ar', 'fr'],
       defaultNS: 'translation',
       interpolation: {
         escapeValue: false, // React already escapes values
