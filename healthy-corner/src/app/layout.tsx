@@ -24,6 +24,24 @@ export const metadata: Metadata = {
     description: APP_DESCRIPTION,
     type: "website",
     url: "https://healthycornermauritanie.me",
+    images: [
+      {
+        url: "/images/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: APP_NAME,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: APP_NAME,
+    description: APP_DESCRIPTION,
+    images: ["/images/logo.jpg"],
+  },
+  icons: {
+    icon: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
   },
   metadataBase: new URL("https://healthycornermauritanie.me"),
 };
