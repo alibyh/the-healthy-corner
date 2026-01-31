@@ -3,7 +3,8 @@
  */
 
 export const APP_NAME = 'The Healthy Corner'
-export const APP_DESCRIPTION = 'Healthy, balanced, and transparent nutrition'
+export const APP_DESCRIPTION =
+  'Healthy, balanced, and transparent nutrition in Nouakchott, Mauritania (Mauritanie) with full nutritional info on every dish'
 
 // Navigation
 export const MOBILE_NAV_ITEMS = [
